@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import axios from "axios";
 import VideoPreview from "@components/preview/video";
-import { Grid } from "@nextui-org/react";
+import { Grid, Loading } from "@nextui-org/react";
 
 const SearchPage = () => {
   const router = useRouter();
@@ -19,7 +19,7 @@ const SearchPage = () => {
   });
 
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <Loading css={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }} />;
   if (data)
     return (
       <div>

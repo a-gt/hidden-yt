@@ -20,18 +20,18 @@ export const StyledNavContainer = styled('div', {
   '& .navbar__social-icon': {
     fill: '$colors$headerIconColor'
   },
-  
+
   variants: {
     showBlur: {
       true: {
-        //background: '$headerBackground'
-        background: "rgb(17 17 17/0.8)"
+        ///background: '$headerBackground'
       }
     },
     detached: {
       true: {
         backdropFilter: 'saturate(180%) blur(12px)',
-        boxShadow: '0px 5px 20px -5px rgba(2, 1, 1, 0.1), inset 0 -1px 0 hsl(0deg 0% 100% / 10%)'
+        boxShadow: '0px 5px 20px -5px rgba(2, 1, 1, 0.1), inset 0 -1px 0 hsl(0deg 0% 100% / 10%)',
+        background: '$headerBackground'
       },
       false: {
         backdropFilter: 'none',

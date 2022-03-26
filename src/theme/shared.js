@@ -35,7 +35,7 @@ export const darkTheme = createTheme({
     colors: {
       background: "rgb(17, 17, 17)",
       menuBackground: 'rgba(17, 17, 17,0.8)',
-      headerBackground: 'rgba(17, 17, 17,0.5)',
+      headerBackground: 'rgba(17, 17, 17, 0.8)',
       headerIconColor: '$accents6',
       codeBackground: '#111111',
       codeComment: '$accents6',

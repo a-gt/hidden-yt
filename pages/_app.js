@@ -16,6 +16,13 @@ function MyApp({ Component, pageProps }) {
       <NextUIProvider>
         <Navbar />
         <Component {...pageProps} />
+        <style>
+          {`
+            .theme-dark {
+              --nextui-colors-headerBackground: rgba(17,17,17,0.8);
+            }
+          `}
+        </style>
       </NextUIProvider>
     </NextThemesProvider>
   );

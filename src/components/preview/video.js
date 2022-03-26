@@ -64,7 +64,7 @@ const VideoPreview = ({
 
                 </Col>
                 <Col css={{ marginLeft: "5px" }}>
-                  <Text color="#fff" size={15} weight="medium">
+                  <Text color="$text" size={15} weight="medium">
                     {title}
                   </Text>
                   <Text color="#d1d1d1" size={12}>
