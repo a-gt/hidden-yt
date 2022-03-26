@@ -39,11 +39,11 @@ const SearchPage = () => {
     return (
       <>
         <Head>
-          <title>Search results for "{search}"</title>
+          <title>Search results for &quot;{search}&quot;</title>
         </Head>
         <div style={{ textAlign: 'center' }}>
           <Spacer y={0.3} />
-          <Text size={25} weight="bold">Search results for "{search}"</Text>
+          <Text size={25} weight="bold">Search results for &quot;{search}&quot;</Text>
           <Grid.Container gap={2} justify="center" style={{ textAlign: 'left' }}>
             {data.items.map((v, i) => {
               if (v.type == "video") {
