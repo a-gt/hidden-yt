@@ -12,8 +12,9 @@ export default function SearchInput() {
   }
 
   useEffect(() => {
+    if (!location.pathname.includes('/search/')) return setValue('')
     const text = decodeURI(location.pathname.replace('/search/', ''))
-    setValue(text == "/" ? "" : text)
+    setValue(text)
   }, [])
 
   return <Input
