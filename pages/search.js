@@ -1,7 +1,7 @@
 import { Spacer, Text } from '@nextui-org/react'
 import { styled } from '@nextui-org/react';
 import Search from "@components/search"
-
+import Head from 'next/head'
 
 const Hero = styled("div", {
   position: "absolute",
@@ -13,10 +13,15 @@ const Hero = styled("div", {
 
 export default function SearchPage() {
   return (
-    <Hero>
-      <Text size={35} weight="bold">Search</Text>
-      <Spacer y={0.5} />
-      <Search />
-    </Hero>
+    <>
+      <Head>
+        <title>Hidden YT</title>
+      </Head>
+      <Hero>
+        <Text size={35} weight="bold">Search</Text>
+        <Spacer y={0.5} />
+        <Search />
+      </Hero>
+    </>
   )
-}
+} 
