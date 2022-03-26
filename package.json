@@ -1,0 +1,31 @@
+{
+  "name": "hidden-yt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^1.0.4-beta.5",
+    "axios": "^0.26.1",
+    "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
+    "next": "12.1.0",
+    "next-themes": "^0.1.1",
+    "react": "17.0.2",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "17.0.2",
+    "react-instantsearch-core": "^6.23.0",
+    "react-instantsearch-dom": "^6.23.0",
+    "swr": "^1.2.2",
+    "tabler-icons-react": "^1.41.0",
+    "ytsr": "^3.6.0"
+  },
+  "devDependencies": {
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0"
+  }
+}
