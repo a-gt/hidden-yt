@@ -45,7 +45,7 @@ const VideoPreview = ({
         </Card.Body>
         <Card.Footer
           css={{
-            background: "$headerBackground",
+            background: "$menuBackground",
             borderTop: "$borderWeights$light solid $gray700",
             zIndex: 1,
           }}
