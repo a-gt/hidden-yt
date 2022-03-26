@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
     if (!info.formats.length) {
       return res
-        .status(400)
+        .status(500)
         .send("This Video is not Available for this Server Region.");
     }
 
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     if (info.videoDetails.isLiveContent && info.formats[0].type == "video/ts") {
       return m3u8stream(info.formats[0].url)
         .on("error", (err) => {
-          res.status(400).send(err.toString());
+          res.status(500).send(err.toString());
           console.error(err);
         })
         .pipe(res);
@@ -61,9 +61,15 @@ export default async function handler(req, res) {
         stream.pipe(res.status(resp.statusCode));
       })
       .on("error", (err) => {
-        res.status(400).send(err.toString());
+        res.status(500).send(err.toString());
       });
   } catch (error) {
-    res.status(400).send(error.toString());
+    res.status(500).send(error.toString());
   }
+}
+
+export const config = {
+  api: {
+    responseLimit: false,
+  },
 }
