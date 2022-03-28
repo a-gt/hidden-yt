@@ -17,6 +17,7 @@
     "miniget": "^4.2.2",
     "next": "12.1.0",
     "next-themes": "^0.1.1",
+    "node-cache": "^5.1.2",
     "react": "17.0.2",
     "react-device-detect": "^2.1.2",
     "react-dom": "17.0.2",
@@ -24,6 +25,7 @@
     "react-instantsearch-dom": "^6.23.0",
     "swr": "^1.2.2",
     "tabler-icons-react": "^1.41.0",
+    "yt-search": "^2.10.3",
     "ytdl-core": "^4.11.0",
     "ytsr": "^3.6.0"
   },
