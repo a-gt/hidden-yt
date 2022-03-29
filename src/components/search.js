@@ -15,7 +15,7 @@ export default function SearchInput() {
     if (!location.pathname.includes('/search/')) return setValue('')
     const text = decodeURI(location.pathname.replace('/search/', ''))
     setValue(text)
-  }, [])
+  }, [router])
 
   return <Input
     rounded

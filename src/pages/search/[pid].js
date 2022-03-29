@@ -16,11 +16,11 @@ const cache = new Cache({ stdTTL: cacheTime * 1000 * 60 * 60 });
 export async function getServerSideProps({ params }) {
   const query = params.pid;
 
-    if (cache.has(query))
-      return { props: { results: JSON.stringify(cache.get(query)) } };
-    const results = await ytsr(query, { limit });
-    cache.set(query, results);
-    return { props: { results: JSON.stringify(results)}};
+  if (cache.has(query))
+    return { props: { results: JSON.stringify(cache.get(query)) } };
+  const results = await ytsr(query, { limit });
+  cache.set(query, results);
+  return { props: { results: JSON.stringify(results) } };
 }
 
 const SearchPage = ({ results }) => {
@@ -63,14 +63,14 @@ const SearchPage = ({ results }) => {
                   <VideoPreview
                     title={v.title}
                     url={v.url}
-                    bestThumbnail={[
-                      v.bestThumbnail.url,
-                      v.bestThumbnail.width,
-                      v.bestThumbnail.height,
-                    ]}
+                    bestThumbnail={JSON.stringify(v.bestThumbnail)}
                     channel={v.author.name}
                     channelIcon={v.author.bestAvatar.url}
                     verified={v.author.verified}
+                    videoDetails={JSON.stringify({
+                      views: v.views,
+                      uploaded: v.uploadedAt
+                    })}
                     key={i}
                   />
                 );
