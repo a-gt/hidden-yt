@@ -13,7 +13,7 @@
     "axios": "^0.26.1",
     "classnames": "^2.3.1",
     "firebase": "^9.6.10",
-    "firebase-tools": "^10.5.0",
+    "firebase-tools": "^11.22.0",
     "human-readable-numbers": "^0.9.5",
     "kbar": "^0.1.0-beta.33",
     "lodash": "^4.17.21",
